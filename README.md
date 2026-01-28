@@ -1,6 +1,61 @@
 # bellhopcxx / bellhopcuda
 C++/CUDA port of `BELLHOP`/`BELLHOP3D` underwater acoustics simulator.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+## 📚 Documentation
+
+This repository includes comprehensive documentation:
+
+- **[DOCUMENTATION.md](DOCUMENTATION.md)** - Complete user guide and API reference
+- **[DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md)** - Architecture and developer documentation
+- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick reference for common tasks
+- **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing and validation guide
+- **[doc/compilation.md](doc/compilation.md)** - Detailed build instructions
+- **[doc/accuracy.md](doc/accuracy.md)** - Accuracy validation details
+- **[doc/performance.md](doc/performance.md)** - Performance benchmarks
+- **[doc/faq.md](doc/faq.md)** - Frequently asked questions
+
+## 🚀 Quick Start
+
+### Installation (5 minutes)
+
+```bash
+# Clone with submodules
+git clone https://github.com/A-New-BellHope/bellhopcuda.git
+cd bellhopcuda
+git submodule update --init --recursive
+
+# Build (CPU only)
+mkdir build && cd build
+cmake .. -DBHC_ENABLE_CUDA=OFF
+cmake --build . --config Release
+
+# Test
+cd bin
+./bellhopcxx --2D ../../test/in/MunkB_ray
+```
+
+### Basic Library Usage
+
+```cpp
+#define BHC_DLL_IMPORT 1
+#include <bhc/bhc.hpp>
+
+int main() {
+    bhc::bhcParams<false> params;  // 2D mode
+    bhc::bhcOutputs<false, false> outputs;
+    bhc::bhcInit init;
+    init.FileRoot = "path/to/environment";
+    
+    bhc::setup(init, params, outputs);
+    bhc::run(params, outputs);
+    bhc::finalize(params, outputs);
+}
+```
+
+See [DOCUMENTATION.md](DOCUMENTATION.md) for complete API reference and examples.
+
 ### Impressum
 
 Copyright (C) 2021-2026 The Regents of the University of California \
