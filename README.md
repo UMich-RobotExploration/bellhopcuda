@@ -5,16 +5,22 @@ C++/CUDA port of `BELLHOP`/`BELLHOP3D` underwater acoustics simulator.
 
 ## 📚 Documentation
 
-This repository includes comprehensive documentation:
+**[Complete Documentation Index →](doc/INDEX.md)**
 
-- **[DOCUMENTATION.md](DOCUMENTATION.md)** - Complete user guide and API reference
-- **[DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md)** - Architecture and developer documentation
-- **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - Quick reference for common tasks
-- **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing and validation guide
-- **[doc/compilation.md](doc/compilation.md)** - Detailed build instructions
-- **[doc/accuracy.md](doc/accuracy.md)** - Accuracy validation details
-- **[doc/performance.md](doc/performance.md)** - Performance benchmarks
-- **[doc/faq.md](doc/faq.md)** - Frequently asked questions
+### Getting Started
+- **[Quick Start Guide](doc/QUICK_START.md)** - Get running in 5 minutes
+- **[User Guide](doc/USER_GUIDE.md)** - Complete API reference and tutorials
+- **[FAQ](doc/faq.md)** - Frequently asked questions
+
+### Building & Performance
+- **[Compilation Guide](doc/compilation.md)** - Detailed build instructions
+- **[Performance Benchmarks](doc/performance.md)** - Speed and optimization details
+- **[Accuracy Validation](doc/accuracy.md)** - Numerical accuracy discussion
+
+### Advanced Topics
+- **[Developer Guide](doc/guides/DEVELOPER_GUIDE.md)** - Architecture and internals
+- **[Testing Guide](doc/guides/TESTING_GUIDE.md)** - Testing and validation workflows
+- **[Documentation Overview](doc/OVERVIEW.md)** - Summary of all documentation
 
 ## 🚀 Quick Start
 
@@ -54,7 +60,7 @@ int main() {
 }
 ```
 
-See [DOCUMENTATION.md](DOCUMENTATION.md) for complete API reference and examples.
+See [doc/USER_GUIDE.md](doc/USER_GUIDE.md) for complete API reference and examples.
 
 ### Impressum
 
